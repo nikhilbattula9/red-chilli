@@ -25,6 +25,7 @@ jobs:
        - name: Super-Linter
          uses: github/super-linter@v4.9.4
          env:
-         # VALIDATE_ALL_CODEBASE: false
+          VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: master
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}     
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          LOG_FILE: super-Linter.log
