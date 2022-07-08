@@ -26,6 +26,6 @@ jobs:
          uses: github/super-linter@v4.9.4
          env:
           VALIDATE_ALL_CODEBASE: false
-          DEFAULT_BRANCH: master
+          DEFAULT_BRANCH: nikhilbattula9-patch-1
           GITHUB_TOKEN: ${{ secrets.toksec }} 
           LOG_FILE: super-Linter.log
