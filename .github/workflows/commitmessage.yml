@@ -6,7 +6,7 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-    #li
+    #lin
     
 
 
@@ -22,5 +22,6 @@ jobs:
         run: |
             echo Commit MSG = ${{ env.commitmsg }}
             echo $(git log -1 --pretty=format:"%s")
+            
 
 
