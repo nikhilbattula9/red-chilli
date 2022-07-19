@@ -2,10 +2,8 @@ name: Lib - Validate Branch Name
 
 
 on:
-  push:
-    branches: [ "master" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "nba/cpe" ]
     #li
     
 
