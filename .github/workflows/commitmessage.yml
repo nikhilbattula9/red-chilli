@@ -21,3 +21,4 @@ jobs:
       - name: get commit message
         run: |
             echo Commit MSG = ${{ env.commitmsg }}
+            echo git log -1 --pretty=format:%B
