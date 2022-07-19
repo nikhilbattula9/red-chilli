@@ -3,7 +3,7 @@ name: Lib - Validate Branch Name
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "sra/520" ]
   pull_request:
     branches: [ "master" ]
     #li
