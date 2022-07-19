@@ -3,7 +3,7 @@ name: Lib - Validate Branch Name
 
 on:
   pull_request:
-    branches: [ "nba/cpe" ]
+    branches: [ "nba/test" ]
     #li
     
 
