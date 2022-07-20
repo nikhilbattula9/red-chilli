@@ -3,7 +3,7 @@ name: Lib - Validate Branch Name
 
 on:
   push:
-    branches: [ "sra/520" ]
+    branches: [ "${{ github.head_href }}"]
  
     
 
