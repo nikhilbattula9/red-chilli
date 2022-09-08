@@ -1,0 +1,29 @@
+name: Runway - Monitor Azure Connectivity
+
+on:   
+  schedule:
+    - cron: '0 * * * *'
+
+  workflow_dispatch:
+
+jobs:
+  monitor_connectivity:
+    runs-on: ubuntu-latest
+    defaults:
+      run:        
+        working-directory: runway/monitoring
+
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      
+      - name: Send Data to Log Analytics
+        shell: pwsh
+        run: |
+          .\heartbeat.ps1 -WorkspaceId ${{ secrets.LA_WORKSPACE_ID }} -WorkspaceKey ${{ secrets.LA_WORKSPACE_KEY }} -GitHubActionRunNumber ${{ github.run_number }} -GitHubRepo ${{ github.repository }}
+
+
