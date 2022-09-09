@@ -1,8 +1,8 @@
-name: Runway - Monitor Azure Connectivity
+# name: Runway - Monitor Azure Connectivity
 
-on:   
-  schedule:
-    - cron: '0 * * * *'
+# on:   
+#   schedule:
+#     - cron: '0 * * * *'
 
   workflow_dispatch:
 
