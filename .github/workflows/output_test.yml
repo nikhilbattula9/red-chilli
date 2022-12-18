@@ -25,9 +25,10 @@ jobs:
     needs: job1
     steps:
       - name: step1
-      - run: |
-           initial=${{needs.job1.outputs.output1}} ${{needs.job1.outputs.output2}}
-           echo initial
+      - run: echo ${{needs.job1.outputs.output1}} ${{needs.job1.outputs.output2}}
+#       |
+#            initial=${{needs.job1.outputs.output1}} ${{needs.job1.outputs.output2}}
+#            echo initial
   job3:
     runs-on: ubuntu-latest
     env:
