@@ -4,8 +4,8 @@ name: Lib - Validate Branch Name
 on:
   push:
     branches: [ "master" ]
-env:
-  DAY_OF_WEEK: "Always Monday"
+# env:
+#   DAY_OF_WEEK: "Always Monday"
 
 jobs:
   job1:
@@ -25,10 +25,10 @@ jobs:
     needs: job1
     steps:
       - name: step1
-      - run: echo ${{needs.job1.outputs.output1}} ${{needs.job1.outputs.output2}}
-#       |
-#            initial=${{needs.job1.outputs.output1}} ${{needs.job1.outputs.output2}}
-#            echo initial
+      - run:  |  
+           echo ${{needs.job1.outputs.output1}} ${{needs.job1.outputs.output2}}
+           initial=${{needs.job1.outputs.output1}} ${{needs.job1.outputs.output2}}
+           echo initial
   job3:
     runs-on: ubuntu-latest
     env:
